@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "QR Redirects",
+  "description": "Maps QR tags to destination URLs",
+  "type": "object",
+  "propertyNames": {
+    "type": "string",
+    "minLength": 1
+  },
+  "additionalProperties": {
+    "type": "string",
+    "minLength": 1,
+    "pattern": "^https?://"
+  }
+}

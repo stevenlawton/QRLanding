@@ -1,0 +1,18 @@
+name: Validate redirects.json
+
+on:
+  push:
+    paths:
+      - redirects.json
+  pull_request:
+    paths:
+      - redirects.json
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate redirects.json against schema
+        run: npx ajv-cli validate -s redirects.schema.json -d redirects.json
