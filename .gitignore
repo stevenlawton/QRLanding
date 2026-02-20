@@ -5,3 +5,6 @@
 .idea/
 .vscode/
 node_modules/
+*.log
+.env
+Thumbs.db

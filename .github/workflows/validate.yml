@@ -14,5 +14,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
       - name: Validate redirects.json against schema
-        run: npx ajv-cli validate -s redirects.schema.json -d redirects.json
+        run: npx ajv-cli@5.0.0 validate -s redirects.schema.json -d redirects.json

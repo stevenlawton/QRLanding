@@ -1,2 +1,2 @@
 RewriteEngine On
-RewriteRule ^qr/(.+)$ redirect.php?tag=$1 [L,QSA]
+RewriteRule ^([a-zA-Z0-9_-]+)/?$ redirect.php?tag=$1 [L,QSA]
